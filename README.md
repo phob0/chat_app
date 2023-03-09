@@ -1,2 +1,2 @@
-# chat_app
+# CHAT APP
 Playing around with MERN stack
