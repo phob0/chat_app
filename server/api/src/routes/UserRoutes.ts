@@ -18,36 +18,36 @@ async function getAll(_: IReq, res: IRes) {
 /**
  * Add one user.
  */
-async function add(req: IReq<{user: IUser}>, res: IRes) {
-  const { user } = req.body;
-  await UserService.addOne(user);
-  return res.status(HttpStatusCodes.CREATED).end();
-}
+// async function add(req: IReq<{user: IUser}>, res: IRes) {
+//   const { user } = req.body;
+//   await UserService.addOne(user);
+//   return res.status(HttpStatusCodes.CREATED).end();
+// }
 
 /**
  * Update one user.
  */
-async function update(req: IReq<{user: IUser}>, res: IRes) {
-  const { user } = req.body;
-  await UserService.updateOne(user);
-  return res.status(HttpStatusCodes.OK).end();
-}
+// async function update(req: IReq<{user: IUser}>, res: IRes) {
+//   const { user } = req.body;
+//   await UserService.updateOne(user);
+//   return res.status(HttpStatusCodes.OK).end();
+// }
 
 /**
  * Delete one user.
  */
-async function delete_(req: IReq, res: IRes) {
-  const id = +req.params.id;
-  await UserService.delete(id);
-  return res.status(HttpStatusCodes.OK).end();
-}
+// async function delete_(req: IReq, res: IRes) {
+//   const id = +req.params.id;
+//   await UserService.delete(id);
+//   return res.status(HttpStatusCodes.OK).end();
+// }
 
 
 // **** Export default **** //
 
 export default {
   getAll,
-  add,
-  update,
-  delete: delete_,
+  // add,
+  // update,
+  // delete: delete_,
 } as const;

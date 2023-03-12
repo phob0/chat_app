@@ -14,4 +14,16 @@ model User {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
   email String
   name String? @default("New User")
+  // salt String
+  // password String
+  roomIds String[] @db.ObjectId
+  rooms Room[] @relation(fields: [roomIds], references: [id])
+}
+
+model Room {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  room_type String @default("room")
+  name String? @default("Chat")
+  userIDs String[] @db.ObjectId
+  users User[] @relation(fields: [userIDs], references: [id])
 }
